@@ -1,0 +1,120 @@
+:root {
+  /* Fonts */
+  --main-font-family: "Kumbh Sans", sans-serif;
+  --main-font-size: 18px;
+
+  /* Colors */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --light-gray: #e8e9ecfa;
+  --white: #fff;
+}
+
+/***********************************************************************************************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+  min-height: 100vh;
+  background-image: url(/assets/images/bg-pattern-top.svg),
+    url(/assets/images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: calc((50vw - 100vh)) -55vh, 55vw 50vh;
+  background-color: var(--dark-cyan);
+  background-size: auto 100vh;
+}
+
+/***********************************************************************************************************************/
+
+.card {
+  width: 325px;
+  height: 360px;
+  background-color: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8.6rem;
+  height: 140px;
+  background-image: url(/assets/images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-color: var(--dark-cyan);
+}
+
+.card__picture {
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  background-color: var(--white);
+}
+
+.card__body {
+  display: grid;
+  place-items: center;
+  padding-top: 3rem;
+}
+
+.card__username {
+  color: var(--very-dark-desaturated-blue);
+  margin-bottom: 0.5rem;
+}
+
+.card__age {
+  padding-left: 0.2rem;
+}
+
+.card__city {
+  margin-top: 0;
+  padding-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.card__footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--light-gray);
+}
+
+.card__visibility {
+  width: 100%;
+  text-align: center;
+}
+
+.card__number {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.8rem;
+  font-size: 1.1rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.card__text {
+  padding-top: 5px;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.card__username,
+.card__number {
+  font-weight: 700;
+}
+
+.card__age,
+.card__text {
+  font-weight: 400;
+}
+
+.card__text--light {
+  color: var(--dark-gray);
+}
